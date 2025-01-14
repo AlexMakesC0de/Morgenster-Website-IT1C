@@ -49,3 +49,16 @@ document.querySelector('#submit').addEventListener('focus', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Your animation code here
+});
+
+// Optional: Reapply animation after DOM updates (if needed)
+document.addEventListener('click', (event) => {
+    if (event.target.matches('a[href*="mode"]')) {
+        setTimeout(() => {
+            // Reinitialize animation here if needed
+        }, 100); // Adjust timeout based on DOM update speed
+    }
+});
